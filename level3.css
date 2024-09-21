@@ -1,0 +1,574 @@
+* {
+  padding: 0px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.page-container {
+  border: 1px solid black;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.game-area {
+  border: 1px solid black;
+  width: 1100px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url(source/Background/LEV3.jpg);
+}
+
+.game-info {
+  height: 100%;
+  width: 250px;
+  background: url(source/Scoreboard_Elements/ScoreBoard_Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bear-con {
+  /* border: 1px solid black; */
+  position: absolute;
+  height: 100px;
+  width: 70px;
+  top: 80%;
+  /* bottom: 10px; */
+  left: 750px;
+  z-index: 5;
+}
+
+.bear-con > img {
+  height: 100%;
+  width: 100%;
+}
+
+.honey-Tree1 {
+  position: absolute;
+
+  /* max-width: 200%; */
+  max-height: 200px;
+  left: 900px;
+  top: 30px;
+}
+
+.honey-Tree2 {
+  position: absolute;
+  /* max-width: 200%; */
+  max-height: 150px;
+  left: 480px;
+  top: -0px;
+}
+
+.honey-Tree3 {
+  position: absolute;
+  /* max-width: 200%; */
+  max-height: 150px;
+  left: 800px;
+  top: -20px;
+}
+
+.level3 {
+  position: absolute;
+  max-height: 30%;
+  left: -5px;
+  top: 450px;
+  z-index: 99;
+}
+
+.flowers1 {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  /* max-height: 5%; */
+  top: 550px;
+  left: 1px;
+}
+
+.flowers2 {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  /* max-height: 5%; */
+  top: 550px;
+  left: 250px;
+}
+
+.flowers3 {
+  position: absolute;
+  width: 300px;
+  height: 75px;
+  /* max-height: 5%; */
+  top: 150px;
+  left: 1px;
+}
+
+.flowers4 {
+  position: absolute;
+  width: 220px;
+  height: 50px;
+  /* max-height: 5%; */
+  top: 200px;
+  left: 750px;
+  z-index: 99;
+}
+
+.grass1-paint {
+  position: absolute;
+  /* max-width: 100em;  */
+  max-height: 20%;
+  top: 515px;
+  left: 790px;
+}
+
+.grass2-paint {
+  position: absolute;
+  /* max-width: 100em;  */
+  max-height: 20%;
+  top: 515px;
+  left: 930px;
+}
+
+.Single-Tree1 {
+  position: absolute;
+  max-height: 50%;
+  top: 50px;
+  left: -30px;
+}
+
+.Single-Tree2 {
+  position: absolute;
+  max-height: 25%;
+  top: 10px;
+  left: 130px;
+}
+
+.Apple-tree {
+  position: absolute;
+  max-height: 30%;
+  left: 220px;
+  top: 30px;
+}
+
+.Tree1 {
+  position: absolute;
+  max-height: 50%;
+  left: 780px;
+  top: 330px;
+}
+
+.honey1 {
+  position: absolute;
+  top: 500px;
+  max-width: 200px;
+  left: 850px;
+}
+
+.honey2 {
+  position: absolute;
+  max-height: 25%;
+  left: 730px;
+  top: 90px;
+}
+
+.grass1 {
+  position: absolute;
+  max-width: 100px;
+  top: 290px;
+  left: 50px;
+}
+
+.grass2 {
+  position: absolute;
+  max-width: 50px;
+  top: 130px;
+  left: 155px;
+}
+
+.grass3 {
+  position: absolute;
+  /* max-width: 100px; */
+  width: 250px;
+  top: 35px;
+  left: 450px;
+}
+
+.grass4 {
+  position: absolute;
+  max-width: 150px;
+  /* width: 250px; */
+  top: 135px;
+  left: 290px;
+}
+
+.cactus1 {
+  position: absolute;
+  left: 523px;
+  top: 475px;
+  max-height: 8%;
+  /* max-width: 50%; */
+  /* transform: rotatey(50deg); */
+}
+
+.cactus2 {
+  position: absolute;
+  left: 450px;
+  top: 210px;
+  max-height: 8%;
+  /* max-width: 50%; */
+  /* transform: rotatey(50deg); */
+}
+
+.flame1 {
+  position: absolute;
+  max-width: 5%;
+  max-height: 5%;
+  top: 320px;
+  left: 220px;
+  /* border: 1px solid black; */
+}
+
+.bee1 {
+  background: url(source/Bee.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 100px;
+  top: 430px;
+  height: 60px;
+  width: 60px;
+  z-index: 101;
+  overflow: hidden;
+  animation: movingBee1 12s infinite;
+}
+
+@keyframes movingBee1 {
+  0% {
+    top: 430px;
+    left: 100px;
+  }
+  25% {
+    top: 400px;
+    left: 300px;
+  }
+  50% {
+    top: 520px;
+    left: 280px;
+  }
+  75% {
+    top: 500px;
+    left: 100px;
+  }
+  100% {
+    top: 430px;
+    left: 100px;
+  }
+}
+
+.bee2 {
+  background: url(source/Bee.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 100px;
+  top: 130px;
+  height: 60px;
+  width: 60px;
+  z-index: 101;
+  overflow: hidden;
+  animation: movingBee2 10s infinite;
+}
+
+@keyframes movingBee2 {
+  0% {
+    top: 130px;
+    left: 100px;
+  }
+  25% {
+    top: 130px;
+    left: 300px;
+  }
+  50% {
+    top: 220px;
+    left: 280px;
+  }
+  75% {
+    top: 220px;
+    left: 100px;
+  }
+  100% {
+    top: 130px;
+    left: 100px;
+  }
+}
+
+.bee3 {
+  background: url(source/Bee.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 600px;
+  top: 130px;
+  height: 60px;
+  width: 60px;
+  z-index: 101;
+  overflow: hidden;
+  animation: movingBee3 8s infinite;
+}
+
+@keyframes movingBee3 {
+  0% {
+    top: 130px;
+    left: 600px;
+  }
+  25% {
+    top: 130px;
+    left: 720px;
+  }
+  50% {
+    top: 220px;
+    left: 720px;
+  }
+  75% {
+    top: 220px;
+    left: 600px;
+  }
+  100% {
+    top: 130px;
+    left: 600px;
+  }
+}
+
+@keyframes hit-bear {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes attackBackLeft {
+  0% {
+    background: url(source/AttackBack/MovingBack_L1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url(source/AttackBack/MovingBack_L1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url(source/AttackBack/MovingBack_L1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url(source/AttackBack/MovingBack_L1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url(source/AttackBack/MovingBack_L2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes attackBackRight {
+  0% {
+    background: url(source/AttackBack/MovingBack_R1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url(source/AttackBack/MovingBack_R1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url(source/AttackBack/MovingBack_R1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url(source/AttackBack/MovingBack_R1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url(source/AttackBack/MovingBack_R2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes attackSideLeft {
+  0% {
+    background: url(source/AttackSidewise/MovingeNetL1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url(source/AttackSidewise/MovingeNetL1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url(source/AttackSidewise/MovingeNetL1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url(source/AttackSidewise/MovingeNetL2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url(source/AttackSidewise/MovingeNetL2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes attackSideRight {
+  0% {
+    background: url(source/AttackSidewise/MovingeNetR1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url(source/AttackSidewise/MovingeNetR1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url(source/AttackSidewise/MovingeNetR1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url(source/AttackSidewise/MovingeNetR1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url(source/AttackSidewise/MovingeNetR2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.header {
+  margin-top: 78px;
+  font-family: Kristen ITC;
+  font-size: 20px;
+  color: #ffe283;
+}
+
+.level {
+  margin-top: 80px;
+  color: #ffe283;
+  font-family: Kristen ITC;
+  font-size: 25px;
+}
+
+.life {
+  height: 100px;
+  width: 100px;
+  background: url(source/Scoreboard_Elements/LifeBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+  color: #422704fa;
+  text-shadow: #f2b3a5 1px 0 10px;
+}
+
+.play {
+  height: 80px;
+  width: 80px;
+  background: url(source/Scoreboard_Elements/PlayBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 15px;
+  margin-bottom: -25px;
+}
+
+.pause {
+  height: 80px;
+  width: 80px;
+  background: url(source/Scoreboard_Elements/PauseBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -25px;
+}
+
+.stop {
+  height: 80px;
+  width: 80px;
+  background: url(source/Scoreboard_Elements/StopBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes bear-jump {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bear-top-jump {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.win {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(source/Won_Msg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.hint {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(source/Property-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}

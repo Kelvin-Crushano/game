@@ -1,0 +1,50 @@
+* {
+  padding: 0px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.page-container {
+  border: 1px solid black;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.game-area {
+  border: 1px solid black;
+  width: 1100px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url(source/HomePage_New.png);
+  background-size: cover;
+}
+
+.bear-con {
+  /* border: 1px solid black; */
+  position: absolute;
+  height: 100px;
+  width: 70px;
+  top: 85%;
+  /* left: -6px; */
+  z-index: 5;
+}
+
+.bear-con > img {
+  height: 100%;
+  width: 100%;
+}
+
+.start {
+  position: absolute;
+  left: 475px;
+  top: 35px;
+  font-family: Kristen ITC;
+  font-size: 28px;
+  background: #977505;
+  color: white;
+  width: 200px;
+  padding: 5px;
+}

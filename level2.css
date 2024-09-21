@@ -1,0 +1,499 @@
+* {
+  padding: 0px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.page-container {
+  border: 1px solid black;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.header {
+  margin-top: 78px;
+  font-family: Kristen ITC;
+  font-size: 20px;
+  color: #ffe283;
+}
+
+.level {
+  margin-top: 80px;
+  color: #ffe283;
+  font-family: Kristen ITC;
+  font-size: 25px;
+}
+
+.game-area {
+  border: 1px solid black;
+  width: 1100px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url(source/Background/LEVEL2BG.jpg);
+}
+
+.game-info {
+  height: 100%;
+  width: 250px;
+  background: url(source/Scoreboard_Elements/ScoreBoard_Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bear-con {
+  /* border: 1px solid black; */
+  position: absolute;
+  height: 100px;
+  width: 70px;
+  top: 90px;
+  /* left: -6px; */
+  z-index: 5;
+}
+
+.bear-con > img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes bear-jump {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bear-top-jump {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hit-bear {
+  50% {
+    opacity: 0;
+  }
+}
+
+.trees {
+  position: absolute;
+  z-index: 99; /* higher the index higher the priority */
+}
+
+.Apple1 {
+  max-width: 50%;
+  max-height: 50%;
+  /* border: 1px solid black; */
+  top: 230px;
+  left: -10px;
+}
+
+.Apple2 {
+  max-width: 30%;
+  max-height: 30%;
+  /* border: 1px solid black; */
+  top: 250px;
+  left: 710px;
+  /* z-index: 0 !important; */
+}
+
+.other1 {
+  position: absolute;
+  max-width: 25%;
+  max-height: 25%;
+  /* border: 1px solid black; */
+  top: 10px;
+  left: 960px;
+  /* right: 10px; */
+ }
+
+.flame1 {
+  position: absolute;
+  max-width: 5%;
+  max-height: 5%;
+  top: 212px;
+  left: 195px;
+  /* border: 1px solid black; */
+}
+
+.flame2 {
+  position: absolute;
+  max-width: 5%;
+  max-height: 5%;
+  top: 330px;
+  left: 935px;
+  /* border: 1px solid black; */
+}
+
+.level2 {
+  position: absolute;
+  max-width: 30%;
+  max-height: 30%;
+  top: 220px;
+  left: 300px;
+  /* border: 1px solid black; */
+  z-index: 99;
+}
+
+.other2 {
+  position: absolute;
+  max-width: 50%;
+  max-height: 50%;
+  /* border: 1px solid black; */
+  top: 10px;
+  left: 735px;
+  z-index: 99;
+}
+
+.bush1-type1 {
+  position: absolute;
+  max-width: 40%;
+  /* max-height: 80%;  */
+  top: 120px;
+  /* width: 100px; */
+  left: 230px;
+}
+
+.bush2-type1 {
+  position: absolute;
+  max-width: 40%;
+  /* max-height: 80%;  */
+  top: 200px;
+  /* width: 100px; */
+  left: 230px;
+}
+
+.bush3-type1 {
+  position: absolute;
+  max-width: 40%;
+  /* max-height: 80%;  */
+  top: 250px;
+  /* width: 100px; */
+  left: 400px;
+}
+
+.bush4-type1 {
+  position: absolute;
+  max-width: 40%;
+  /* max-height: 80%;  */
+  top: 500px;
+  /* width: 100px; */
+  left: 550px;
+  z-index: 99;
+}
+
+.bush5-type1 {
+  position: absolute;
+  max-width: 40%;
+  /* max-height: 80%;  */
+  top: -50px;
+  /* width: 100px; */
+  left: 230px;
+  /* rotate: 5deg; */
+}
+
+.bush6-type1 {
+  position: absolute;
+  max-width: 35%;
+  /* max-height: 80%;  */
+  top: 30px;
+  /* width: 100px; */
+  left: 570px;
+  /* rotate: 5deg; */
+  z-index: 0 !important;
+ 
+}
+
+.bush1-type2 {
+  position: absolute;
+  max-width: 40%;
+  max-height: 40%;
+  top: 500px;
+  /* width: 100px; */
+  left: 100px;
+  z-index: 99;
+}
+
+.bush2-type2 {
+  position: absolute;
+  max-width: 40%;
+  max-height: 40%;
+  top: 360px;
+  /* width: 100px; */
+  left: 250px;
+}
+
+.bush1-type3 {
+  position: absolute;
+  max-width: 20%;
+  top: 1px;
+  }
+
+  .bush2-type3 {
+    position: absolute;
+    max-width: 20%;
+    top: 170px;
+    left: 630px;
+    }
+
+.grass {
+  position: absolute;
+  max-width: 7%;
+  max-height: 7%;
+  right: -15px;
+  top: 140px;
+}
+
+.flowers1 {
+  position: absolute;
+  width: 200px;
+  /* height: 100px; */
+  /* max-height: 5%; */
+  top: 470px;
+  left: 1px;
+  z-index: 99;
+}
+
+.flowers2 {
+  position: absolute;
+  width: 250px;
+  /* height: 100px; */
+  /* max-height: 5%; */
+  top: 45px;
+  left: 1px;
+}
+
+.cactus {
+  position: absolute;
+  left: 542px;
+  top: 480px;
+  max-height: 10%;
+  /* max-width: 50%; */
+  transform: rotatey(50deg);
+}
+
+.life {
+  height: 100px;
+  width: 100px;
+  background: url(source/Scoreboard_Elements/LifeBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+  color: #422704fa;
+  text-shadow: #f2b3a5 1px 0 10px;
+}
+
+.play {
+  height: 80px;
+  width: 80px;
+  background: url(source/Scoreboard_Elements/PlayBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 15px;
+  margin-bottom: -25px;
+}
+
+.pause {
+  height: 85px;
+  width: 80px;
+  background: url(source/Scoreboard_Elements/PauseBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -25px;
+}
+
+.stop {
+  height: 90px;
+  width: 80px;
+  background: url(source/Scoreboard_Elements/StopBtn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play:hover,
+.pause:hover,
+.stop:hover {
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+.chopper {
+  position: absolute;
+  left: 250px;
+  top: 350px;
+  height: 128px;
+  width: 128px;
+  z-index: 101;
+  animation: moveChopper 20s infinite;
+}
+
+@keyframes moveChopper {
+  0% {
+    top: 50px;
+    left: 325px;
+    background-image: url(source/chopper.gif);
+    transform: rotateY(180deg);
+  }
+  25% {
+    top: 50px;
+    left: 650px;
+    background-image: url(source/chopper.gif);
+  }
+  50% {
+    top: 425px;
+    left: 650px;
+    background-image: url(source/chopper.gif);
+    transform: rotateY(0deg);
+  }
+  75% {
+    top: 425px;
+    left: 325px;
+    background-image: url(source/chopper.gif);
+  }
+  100% {
+    top: 50px;
+    left: 325px;
+    background-image: url(source/chopper.gif);
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes catch-net {
+  0% {
+    background-image: url(source/PickingNet/Picking_Net_1.png);
+  }
+  50% {
+    background-image: url(source/PickingNet/Picking_Net_2.png);
+  }
+  100% {
+    background-image: url(source/PickingNet/Picking_Net_3.png);
+  }
+}
+
+.win {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(source/Level\ Completed_Msg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.object {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.object div {
+  padding: 25px;
+  background-color: #ff5733;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.object div h4 {
+  color: white;
+  font-size: 24px;
+}
+
+.object div button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  background-color: #daf7a6;
+
+  font-weight: 600;
+}
+
+.object div button:hover {
+  background-color: #bbef5d;
+  cursor: pointer;
+}
+
+.net {
+  display: block;
+  position: absolute;
+  width: 315px;
+  height: 100px;
+  top: 10px;
+  left: 735px;
+  background-image: url(source/FillNet.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(248deg);
+  z-index: 99 !important;
+  animation: visibleNet 4s 2;
+}
+
+@keyframes visibleNet {
+  0%,
+  16.67%,
+  33.33%,
+  50%,
+  66.67%,
+  83.33%,
+  100% {
+    opacity: 1;
+  }
+  8.33%,
+  25%,
+  41.67%,
+  58.33%,
+  75%,
+  91.67% {
+    opacity: 0;
+  }
+}
+
+.hint {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(source/Properties-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
